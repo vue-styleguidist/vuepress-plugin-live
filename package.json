@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "docs": "vuepress dev docs --no-clear-screen",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -30,7 +32,7 @@
     "ts-jest": "^24.0.2",
     "typescript": "^3.4.5",
     "unist-util-visit": "^1.4.0",
-    "vuepress": "^0.14.11"
+    "vuepress": "^1.0.0-alpha.47"
   },
   "dependencies": {
     "vue-live": "^0.4.3"
