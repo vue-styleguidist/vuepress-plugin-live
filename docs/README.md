@@ -1,6 +1,5 @@
----
-home: true 
-actionText: Try it Out →
----
-
 # Hello World
+
+```html
+<button>example</button>
+```
