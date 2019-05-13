@@ -1,5 +1,5 @@
 {
-  "name": "vuepress-live-examples",
+  "name": "vuepress-live",
   "version": "0.0.1",
   "description": "Make your markdown code examples come alive ",
   "main": "dist/index.js",
