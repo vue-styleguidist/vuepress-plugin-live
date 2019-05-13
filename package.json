@@ -30,6 +30,6 @@
     "vuepress": "^1.0.0-alpha.47"
   },
   "dependencies": {
-    "vue-live": "^0.4.3"
+    "vue-live": "^0.4.4"
   }
 }

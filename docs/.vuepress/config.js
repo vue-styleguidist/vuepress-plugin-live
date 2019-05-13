@@ -1,6 +1,7 @@
 module.exports = {
-  title: "VuePress Boilerplate",
-  description: "VuePress Project Documentation System",
+  dest: "docs/dist",
+  title: "VuePress Live",
+  description: "Demo site of the VuePress-live plugin",
   themeConfig: {
     docsDir: "docs"
   },

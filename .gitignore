@@ -1,5 +1,5 @@
 # build artefacts
-dist/
+/docs/dist/
 
 # Logs
 logs

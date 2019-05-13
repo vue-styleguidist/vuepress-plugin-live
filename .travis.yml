@@ -30,7 +30,7 @@ jobs:
       deploy:
         skip_cleanup: true
         provider: surge
-        project: ./dist/
+        project: ./docs/dist/
         domain: vuepress-live.surge.sh
 
     - stage: release
