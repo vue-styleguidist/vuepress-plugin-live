@@ -12,10 +12,10 @@ const addVueLive = md => {
   };
 };
 
-export default function markDownPlugin(config) {
+module.exports = function markDownPlugin(config) {
   config.plugins.delete("snippet");
   config
     .plugin("vue-live")
     .use(addVueLive)
     .end();
-}
+};

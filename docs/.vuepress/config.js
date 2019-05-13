@@ -4,5 +4,5 @@ module.exports = {
   themeConfig: {
     docsDir: "docs"
   },
-  plugins: [[require("../../dist/index")]]
+  plugins: [[require("../../src/index")]]
 };
