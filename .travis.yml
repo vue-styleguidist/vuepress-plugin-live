@@ -1,0 +1,38 @@
+language: node_js
+
+node_js:
+  - lts/*
+
+install:
+  - npm ci
+
+# In order to avoid double build on pull requests,
+# only build on pushes on master and on pushes on pull requests
+branches:
+  only:
+    - master
+
+stages:
+  - test
+  - name: demo
+    if: type != pull_request AND branch = master
+  - name: release
+    if: type != pull_request AND branch = master  
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - npx danger ci
+
+    - stage: demo
+      script: npm run docs:build
+      deploy:
+        skip_cleanup: true
+        provider: surge
+        project: ./dist/
+        domain: vuepress-live.surge.sh
+
+    - stage: release
+      script:
+        - npx semantic-release
