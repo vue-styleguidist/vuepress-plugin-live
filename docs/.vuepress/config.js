@@ -1,3 +1,4 @@
+const path = require("path");
 module.exports = {
   dest: "docs/dist",
   title: "VuePress Live",
@@ -7,5 +8,18 @@ module.exports = {
     editLinks: true,
     docsDir: "docs"
   },
-  plugins: [[require("../../src/index")]]
+  plugins: [
+    [require("../../src/index")],
+    [
+      "@vuepress/register-components",
+      {
+        components: [
+          {
+            name: "vue-slider",
+            path: path.resolve(__dirname, "../vue-slider")
+          }
+        ]
+      }
+    ]
+  ]
 };
