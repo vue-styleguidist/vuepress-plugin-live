@@ -4,7 +4,7 @@ const chainMarkdown = require("./markDownPlugin");
 
 module.exports = () => {
   return {
-    name: "vuepress-live-examples",
+    name: "vuepress-plugin-live",
     chainWebpack,
     enhanceAppFiles,
     chainMarkdown
