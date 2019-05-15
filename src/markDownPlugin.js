@@ -8,7 +8,7 @@ const addVueLive = md => {
       return fence(...args);
     }
     const code = md.utils.escapeHtml(token.content);
-    return `<vue-live code="${code}" />`;
+    return `<vue-live :code="\`${code}\`" />`;
   };
 };
 
