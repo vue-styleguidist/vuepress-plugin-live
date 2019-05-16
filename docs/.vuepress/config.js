@@ -7,7 +7,8 @@ module.exports = {
     repo: "vue-styleguidist/vuepress-live",
     editLinks: true,
     docsDir: "docs",
-    search: false
+    search: false,
+    sidebar: ["/", "/Install.md"]
   },
   plugins: [
     [require("../../src/index")],

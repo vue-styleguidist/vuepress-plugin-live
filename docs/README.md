@@ -2,27 +2,22 @@
 
 Vuepress-live allows you to make your examples more interactive automatically. For now, just add a `live` after the language in your fenced code samples like this.
 
+## Make example live
+
+Writing this in your markdown
+
 <pre><code>```vue live
-&lt;h1&gt; Hello World&lt;/h1&gt;
+&lt;button&gt;example&lt;/button&gt;
 ```
 </code></pre>
 
-Here is a live example
+will have this result
 
 ```html live
 <button>example</button>
 ```
 
-Here is a static example
-
-```html
-<button>example</button>
-```
-
-
----
-
-## And showcasing more avanced component
+## Showcase components
 
 Using the [@vuepress/register-components](https://www.npmjs.com/package/@vuepress/plugin-register-components) plugin, one can load components in their vuepress site. Since they are now available they can now be showcased.
 
