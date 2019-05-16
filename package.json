@@ -25,11 +25,11 @@
   },
   "homepage": "https://github.com/elevatebart/vuepress-live-examples#readme",
   "devDependencies": {
-    "@vuepress/plugin-register-components": "^1.0.0-alpha.0",
+    "@vuepress/plugin-register-components": "^1.0.0-alpha.48",
     "remark": "^10.0.1",
     "unist-util-visit": "^1.4.0",
     "vue-slider-component": "^3.0.31",
-    "vuepress": "^1.0.0-alpha.47"
+    "vuepress": "^1.0.0-alpha.48"
   },
   "dependencies": {
     "vue-live": "^0.4.5"
