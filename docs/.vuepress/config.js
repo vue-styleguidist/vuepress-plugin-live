@@ -6,7 +6,8 @@ module.exports = {
   themeConfig: {
     repo: "vue-styleguidist/vuepress-live",
     editLinks: true,
-    docsDir: "docs"
+    docsDir: "docs",
+    search: false
   },
   plugins: [
     [require("../../src/index")],
