@@ -24,7 +24,7 @@ Here is a static example
 
 ## And showcasing more avanced component
 
-Using the [@vuepress/register-components](https://www.npmjs.com/package/@vuepress/plugin-register-components) plugin, one can hlaod components in their vuepress site. Since they are now available they can now be showcased.
+Using the [@vuepress/register-components](https://www.npmjs.com/package/@vuepress/plugin-register-components) plugin, one can load components in their vuepress site. Since they are now available they can now be showcased.
 
 Here you can see the [vue-slider-component](https://www.npmjs.com/package/vue-slider-component) in action.
 
