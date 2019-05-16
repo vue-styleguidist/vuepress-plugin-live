@@ -1,4 +1,4 @@
-# VuePress Live
+# Concept
 
 Vuepress-live allows you to make your examples more interactive automatically. For now, just add a `live` after the language in your fenced code samples like this.
 
