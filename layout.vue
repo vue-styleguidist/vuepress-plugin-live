@@ -19,6 +19,7 @@
 
 .editor {
   width: 100%;
+  background-color: #2d2d2d;
 }
 
 .preview {
