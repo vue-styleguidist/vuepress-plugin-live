@@ -11,7 +11,7 @@ module.exports = {
     sidebar: ["/", "/Install.md"]
   },
   plugins: [
-    [require("../../src/index")],
+    [require("../../index")],
     [
       "@vuepress/register-components",
       {
