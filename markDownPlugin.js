@@ -12,7 +12,7 @@ const addVueLive = md => {
 
     const code = token.content;
     // TODO: analyze code here to find requires
-    // put all requires into an requires object
+    // put all requires into a "requires" object
     // add this as a prop
     return `<vue-live :code="\`${md.utils.escapeHtml(code)}\`" />`;
   };
