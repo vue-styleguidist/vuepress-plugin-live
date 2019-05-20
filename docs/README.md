@@ -11,7 +11,7 @@ Writing this in your markdown
 ```
 </code></pre>
 
-will have this result
+will have this result... Go ahead, edit the part on the left. The right side has changed.
 
 ```html live
 <button>example</button>
