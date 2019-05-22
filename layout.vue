@@ -1,55 +1,50 @@
-<template functional>
+<template>
   <div class="preview-code">
-    <div class="preview">
+    <div class="preview block">
       <slot name="preview"></slot>
     </div>
-    <div class="editor">
+    <div class="editor block">
       <slot name="editor"></slot>
     </div>
   </div>
 </template>
-<style scoped>
+
+<style>
+.no-focus {
+  outline: none !important;
+}
+
 .preview-code {
   display: flex;
-  flex-direction: row-reverse;
+  flex-flow: row-reverse wrap;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(247, 247, 247);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)!important;
+}
+
+.preview-code .editor {
+  background-color: #2d2d2d;
   overflow: hidden;
 }
 
-.editor {
-  width: 100%;
-  background-color: #2d2d2d;
-}
-
-.preview {
-  width: 100%;
+.preview-code .block {
+  flex-grow: 1;
   padding: 12px;
-  background-color: #fff;
+}
+
+.preview-code .preview {
+  background-color: rgb(249, 245, 245);
   text-align: center;
-}
-
-@media only screen and (max-width: 568px) {
-  .preview-code {
-    display: block;
-  }
-
-  .preview-code > div {
-    width: auto;
-  }
-}
-
-@media only screen and (max-width: 419px) {
-  .preview-code {
-    margin: 0.85rem -1.5rem;
-    border-radius: 0;
-  }
+  min-width: 40%;
 }
 </style>
 
-<style>
-.content .preview-code .editor pre {
-  border-radius: 0;
-  margin: 0;
+<script>
+export default {
+  mounted() {
+    this.$nextTick(() => {
+      document.querySelectorAll('pre').forEach(e => e.classList.add('no-focus'))
+    }, 100)
+  }
 }
-</style>
+</script>
