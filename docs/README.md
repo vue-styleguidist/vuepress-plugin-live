@@ -28,9 +28,7 @@ let value = 72;
 
 <div>value: {{ value }}</div>
 <vue-slider
-      style="
-      margin: 20px 0;
-       width: 100%;"
+      style="margin: 20px 0;"
       v-model="value"
       :order="false"
     />

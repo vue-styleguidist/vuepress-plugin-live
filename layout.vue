@@ -11,7 +11,7 @@
 
 <style>
 .no-focus {
-  outline: none !important;
+  outline: none;
 }
 
 .preview-code {
