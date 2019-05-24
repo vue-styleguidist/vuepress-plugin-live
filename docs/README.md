@@ -19,7 +19,7 @@ Go ahead! edit the part on the left. The right side has changed.
 <button>example</button>
 ```
 
-You can continue using non-rendered code
+You can continue using non-rendered code if you don't add `live`
 
 ```html
 <button>example</button>
