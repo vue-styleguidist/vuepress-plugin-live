@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <div class="preview-code">
     <div class="preview block">
       <slot name="preview"></slot>
@@ -10,41 +10,35 @@
 </template>
 
 <style>
-.no-focus {
-  outline: none;
-}
-
 .preview-code {
   display: flex;
   flex-flow: row-reverse wrap;
   border-radius: 6px;
-  border: 1px solid rgb(247, 247, 247);
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)!important;
-}
-
-.preview-code .editor {
-  background-color: #2d2d2d;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
 
 .preview-code .block {
   flex-grow: 1;
-  padding: 12px;
+  width: 50%;
+}
+
+.preview-code .editor .prism-editor-wrapper {
+  height: 100%;
+}
+
+.preview-code .editor pre {
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  border-radius: 0;
 }
 
 .preview-code .preview {
   background-color: rgb(249, 245, 245);
   text-align: center;
-  min-width: 40%;
+  box-sizing: border-box;
+  padding: 12px;
 }
 </style>
-
-<script>
-export default {
-  mounted() {
-    this.$nextTick(() => {
-      document.querySelectorAll('pre').forEach(e => e.classList.add('no-focus'))
-    }, 100)
-  }
-}
-</script>
