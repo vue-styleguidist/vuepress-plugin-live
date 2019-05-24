@@ -29,7 +29,8 @@
     "remark": "^10.0.1",
     "unist-util-visit": "^1.4.0",
     "vue-slider-component": "^3.0.31",
-    "vuepress": "^1.0.0-alpha.48"
+    "vuepress": "^1.0.0-alpha.48",
+    "validate-commit-msg": "^2.14.0"
   },
   "dependencies": {
     "vue-live": "^0.4.6"
