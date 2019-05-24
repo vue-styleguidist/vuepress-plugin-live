@@ -1,55 +1,59 @@
 <template functional>
   <div class="preview-code">
-    <div class="preview">
+    <div class="preview block">
       <slot name="preview"></slot>
     </div>
-    <div class="editor">
+    <div class="editor block">
       <slot name="editor"></slot>
     </div>
   </div>
 </template>
-<style scoped>
+
+<style>
 .preview-code {
   display: flex;
-  flex-direction: row-reverse;
+  flex-flow: row-reverse wrap;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
 
-.editor {
-  width: 100%;
-  background-color: #2d2d2d;
+.preview-code .block {
+  flex-grow: 1;
+  width: 50%;
 }
 
-.preview {
-  width: 100%;
-  padding: 12px;
-  background-color: #fff;
+.preview-code .editor .prism-editor-wrapper {
+  height: 100%;
+}
+
+.preview-code .editor pre {
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  border-radius: 0;
+}
+
+.preview-code .preview {
+  background-color: rgb(249, 245, 245);
   text-align: center;
+  box-sizing: border-box;
+  padding: 12px;
 }
 
 @media only screen and (max-width: 568px) {
   .preview-code {
     display: block;
   }
-
-  .preview-code > div {
+  .preview-code .block {
     width: auto;
   }
 }
-
 @media only screen and (max-width: 419px) {
   .preview-code {
     margin: 0.85rem -1.5rem;
     border-radius: 0;
   }
-}
-</style>
-
-<style>
-.content .preview-code .editor pre {
-  border-radius: 0;
-  margin: 0;
 }
 </style>

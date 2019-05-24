@@ -33,6 +33,6 @@
     "validate-commit-msg": "^2.14.0"
   },
   "dependencies": {
-    "vue-live": "^0.4.6"
+    "vue-live": "^0.4.8"
   }
 }
