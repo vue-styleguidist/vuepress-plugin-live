@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elevatebart/vuepress-live-examples.git"
+    "url": "git+https://github.com/vue-styleguidist/vuepress-plugin-live.git"
   },
   "keywords": [
     "vue",
@@ -21,9 +21,9 @@
   "author": "ledouxb@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/elevatebart/vuepress-live-examples/issues"
+    "url": "https://github.com/vue-styleguidist/vuepress-plugin-live/issues"
   },
-  "homepage": "https://github.com/elevatebart/vuepress-live-examples#readme",
+  "homepage": "http://vuepress-live.surge.sh/",
   "devDependencies": {
     "@vuepress/plugin-register-components": "^1.0.0-alpha.48",
     "remark": "^10.0.1",
