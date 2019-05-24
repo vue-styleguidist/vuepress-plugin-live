@@ -41,4 +41,19 @@
   box-sizing: border-box;
   padding: 12px;
 }
+
+@media only screen and (max-width: 568px) {
+  .preview-code {
+    display: block;
+  }
+  .preview-code .block {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 419px) {
+  .preview-code {
+    margin: 0.85rem -1.5rem;
+    border-radius: 0;
+  }
+}
 </style>

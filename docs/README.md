@@ -4,16 +4,24 @@ Vuepress-live allows you to make your examples more interactive automatically. F
 
 ## Make example live
 
-Writing this in your markdown
+Writing this in your markdown...
 
 <pre><code>```vue live
 &lt;button&gt;example&lt;/button&gt;
 ```
 </code></pre>
 
-will have this result... Go ahead, edit the part on the left. The right side has changed.
+...will have this result.
+
+Go ahead! edit the part on the left. The right side has changed.
 
 ```html live
+<button>example</button>
+```
+
+You can continue using non-rendered code
+
+```html
 <button>example</button>
 ```
 
