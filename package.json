@@ -26,13 +26,18 @@
   "homepage": "http://vuepress-live.surge.sh/",
   "devDependencies": {
     "@vuepress/plugin-register-components": "^1.0.0-alpha.48",
+    "lodash": "^4.17.11",
     "remark": "^10.0.1",
     "unist-util-visit": "^1.4.0",
+    "validate-commit-msg": "^2.14.0",
     "vue-slider-component": "^3.0.31",
-    "vuepress": "^1.0.0-alpha.48",
-    "validate-commit-msg": "^2.14.0"
+    "vuepress": "^1.0.0-alpha.48"
   },
   "dependencies": {
-    "vue-live": "^0.4.8"
+    "acorn": "^6.1.1",
+    "acorn-jsx": "^5.0.1",
+    "vue-inbrowser-compiler": "^3.13.8",
+    "vue-live": "^0.4.8",
+    "walkes": "^0.2.1"
   }
 }

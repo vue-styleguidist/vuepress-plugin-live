@@ -32,7 +32,7 @@ Using the [@vuepress/register-components](https://www.npmjs.com/package/@vuepres
 Here you can see the [vue-slider-component](https://www.npmjs.com/package/vue-slider-component) in action.
 
 ```jsx live
-let value = 72;
+let value = 72
 
 <div>value: {{ value }}</div>
 <vue-slider
@@ -40,4 +40,16 @@ let value = 72;
       v-model="value"
       :order="false"
     />
+```
+
+You can even require external libraries in your examples.
+```jsx live
+const _ = require("lodash")
+const anu = [2, 5, 7]
+const newArray = []
+_.each(anu, a => {
+  newArray.push(`number: ${a}`)
+})
+
+<div>value: {{ newArray.join(",") }}</div>
 ```
