@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-live",
-  "version": "1.0.0",
+  "version": "0.0.0-dev",
   "description": "Make your markdown code examples come alive ",
   "main": "index.js",
   "scripts": {
