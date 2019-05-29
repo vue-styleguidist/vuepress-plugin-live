@@ -4,7 +4,7 @@ module.exports = {
   title: "VuePress Live",
   description: "Demo site of the VuePress-live plugin",
   themeConfig: {
-    repo: "vue-styleguidist/vuepress-live",
+    repo: "vue-styleguidist/vuepress-plugin-live",
     editLinks: true,
     docsDir: "docs",
     search: false,
