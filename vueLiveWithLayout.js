@@ -6,7 +6,7 @@ import layout from "./layout.vue";
 if (typeof window !== "undefined" && window.global === undefined) {
   window.global = {};
 }
-const { VueLive } = require("vue-live");
+const { VueLive } = require("vue-live/dist/vue-live.common");
 
 export default {
   functional: true,
