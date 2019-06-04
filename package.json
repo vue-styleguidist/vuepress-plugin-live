@@ -37,7 +37,7 @@
     "acorn": "^6.1.1",
     "acorn-jsx": "^5.0.1",
     "vue-inbrowser-compiler": "^3.13.8",
-    "vue-live": "^1.0.1",
+    "vue-live": "^1.1.1",
     "walkes": "^0.2.1"
   }
 }
