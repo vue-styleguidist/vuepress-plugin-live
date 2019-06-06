@@ -31,7 +31,6 @@
   margin: 0;
   outline: none !important;
   border-radius: 0;
-  height: calc(100vh - 88vh);
   overflow-wrap: break-word;
   overflow: auto;
   tab-size: 2;
