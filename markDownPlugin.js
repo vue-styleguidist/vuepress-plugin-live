@@ -31,7 +31,7 @@ const addVueLive = md => {
     // put all requires into a "requires" object
     // add this as a prop
     const scr = getScript(code);
-    const requires = getImports(scr).map(mod => `${mod}: require('${mod}')`);
+    const requires = getImports(scr).map(mod => `'${mod}': require('${mod}')`);
 
     return `<vue-live :code="\`${md.utils
       .escapeHtml(code)
