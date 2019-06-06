@@ -30,7 +30,7 @@
 
 .preview-code .editor pre {
   margin: 0;
-  outline: none !important;
+  outline: none;
   border-radius: 0;
   overflow-wrap: break-word;
   overflow: auto;
