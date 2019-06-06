@@ -1,4 +1,3 @@
-const acornJsx = require("acorn-jsx");
 const walkes = require("walkes");
 const getAst = require("./getAst");
 
@@ -6,12 +5,8 @@ const getAst = require("./getAst");
  * Returns a list of all strings used in import statements or require() calls
  */
 module.exports = function getImports(code) {
-  // Parse example source code, but ignore errors:
-  // 1. Adjacent JSX elements must be wrapped in an enclosing tag (<X/><Y/>) -
-  //    imports/requires are not allowed in this case, and we'll wrap the code
-  //    in React.Fragment on the frontend
-  // 2. All other errors - we'll deal with them on the frontend
-  const ast = getAst(code, [acornJsx()]);
+  // Parse example source code, but ignore errors
+  const ast = getAst(code);
   if (!ast) {
     return [];
   }
