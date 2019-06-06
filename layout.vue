@@ -20,7 +20,8 @@
 
 .preview-code .block {
   width: 100%;
-  min-height: 150px;
+  height: min-content;
+  min-height: 70px;
 }
 
 .editor {
@@ -34,7 +35,6 @@
   overflow-wrap: break-word;
   overflow: auto;
   tab-size: 2;
-  height: min-content;
 }
 
 .preview-code .preview {
