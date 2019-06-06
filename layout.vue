@@ -12,27 +12,30 @@
 <style>
 .preview-code {
   display: flex;
-  flex-flow: row-reverse wrap;
+  flex-direction: column;
   border-radius: 6px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
 }
 
 .preview-code .block {
-  flex-grow: 1;
-  width: 50%;
+  width: 100%;
+  min-height: 150px;
 }
 
-.preview-code .editor .prism-editor-wrapper {
-  height: 100%;
+.editor {
+  background-color: #282c34;
 }
 
 .preview-code .editor pre {
   margin: 0;
-  box-sizing: border-box;
-  height: 100%;
+  outline: none !important;
   border-radius: 0;
+  height: calc(100vh - 88vh);
+  overflow-wrap: break-word;
+  overflow: auto;
+  tab-size: 2;
+  height: min-content;
 }
 
 .preview-code .preview {
@@ -40,20 +43,5 @@
   text-align: center;
   box-sizing: border-box;
   padding: 12px;
-}
-
-@media only screen and (max-width: 568px) {
-  .preview-code {
-    display: block;
-  }
-  .preview-code .block {
-    width: auto;
-  }
-}
-@media only screen and (max-width: 419px) {
-  .preview-code {
-    margin: 0.85rem -1.5rem;
-    border-radius: 0;
-  }
 }
 </style>
