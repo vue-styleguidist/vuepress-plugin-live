@@ -11,49 +11,21 @@
 
 <style>
 .preview-code {
-  display: flex;
-  flex-flow: row-reverse wrap;
-  border-radius: 6px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-}
-
-.preview-code .block {
-  flex-grow: 1;
-  width: 50%;
-}
-
-.preview-code .editor .prism-editor-wrapper {
-  height: 100%;
 }
 
 .preview-code .editor pre {
   margin: 0;
-  box-sizing: border-box;
-  height: 100%;
+  outline: none;
   border-radius: 0;
+  overflow-wrap: break-word;
+  overflow: auto;
+  tab-size: 2;
 }
 
 .preview-code .preview {
-  background-color: rgb(249, 245, 245);
-  text-align: center;
-  box-sizing: border-box;
   padding: 12px;
-}
-
-@media only screen and (max-width: 568px) {
-  .preview-code {
-    display: block;
-  }
-  .preview-code .block {
-    width: auto;
-  }
-}
-@media only screen and (max-width: 419px) {
-  .preview-code {
-    margin: 0.85rem -1.5rem;
-    border-radius: 0;
-  }
+  background-color: rgb(249, 245, 245);
 }
 </style>
