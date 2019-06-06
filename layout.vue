@@ -11,21 +11,8 @@
 
 <style>
 .preview-code {
-  display: flex;
-  flex-direction: column;
-  border-radius: 6px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.preview-code .block {
-  width: 100%;
-  height: min-content;
-  min-height: 70px;
-}
-
-.editor {
-  background-color: #282c34;
 }
 
 .preview-code .editor pre {
@@ -38,9 +25,7 @@
 }
 
 .preview-code .preview {
-  background-color: rgb(249, 245, 245);
-  text-align: center;
-  box-sizing: border-box;
   padding: 12px;
+  background-color: rgb(249, 245, 245);
 }
 </style>
