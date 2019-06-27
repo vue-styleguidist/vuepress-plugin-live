@@ -4,6 +4,7 @@
   "description": "Make your markdown code examples come alive ",
   "main": "index.js",
   "scripts": {
+    "start": "npm run docs",
     "docs": "vuepress dev docs --no-clear-screen",
     "docs:build": "vuepress build docs"
   },

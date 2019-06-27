@@ -13,11 +13,19 @@ yarn add -D vuepress-plugin-live
 
 In `.vuepress/config.js` add `["live"]` to the list of plugins
 
-```js{3,4,5}
+```js{6,7,8,9,10,11,12}
+const path = require("path");
+
 module.exports = {
   //...
   plugins: [
-    ["live"],
+    [
+      "live",
+      {
+        // optional: use layout to customize how the live editor is going to look like
+        layout: path.resolve(__dirname, "./myCustomLayout.vue")
+      }
+    ],
     [
       "@vuepress/register-components",
       {
@@ -31,4 +39,22 @@ module.exports = {
     ]
   ]
 };
+```
+
+### Options
+
+#### `layout` (optional)
+
+Absolute path to the layout vue-live is going to use.
+NOTA: the layout should have 2 slots named `preview` and `editor`.
+
+Example layout (simplest):
+
+```vue
+<template functional>
+  <div>
+    <slot name="preview"></slot>
+    <slot name="editor"></slot>
+  </div>
+</template>
 ```
