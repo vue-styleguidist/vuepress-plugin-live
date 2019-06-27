@@ -14,8 +14,8 @@ module.exports = {
     [
       require("../../index"),
       {
-        // uncomment this to use a custom layout
-        // layout: path.resolve(__dirname, "../custom-layout")
+        // uncomment next line to use a custom layout
+        // layout: path.resolve(__dirname, "./components/custom-layout.vue")
       }
     ],
     [
