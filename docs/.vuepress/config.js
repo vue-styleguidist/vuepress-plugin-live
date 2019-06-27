@@ -11,7 +11,12 @@ module.exports = {
     sidebar: ["/", "/Install.md"]
   },
   plugins: [
-    [require("../../index")],
+    [
+      require("../../index"),
+      {
+        layout: path.resolve(__dirname, "../custom-layout")
+      }
+    ],
     [
       "@vuepress/register-components",
       {
