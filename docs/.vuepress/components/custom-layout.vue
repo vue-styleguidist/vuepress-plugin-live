@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .preview-code {
   border: 3px dashed green;
 }
