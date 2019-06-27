@@ -14,7 +14,8 @@ module.exports = {
     [
       require("../../index"),
       {
-        layout: path.resolve(__dirname, "../custom-layout")
+        // uncomment this to use a custom layout
+        // layout: path.resolve(__dirname, "../custom-layout")
       }
     ],
     [
