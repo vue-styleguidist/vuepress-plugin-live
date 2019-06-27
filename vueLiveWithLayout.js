@@ -1,4 +1,4 @@
-import layout from "./layout.vue";
+import layout from "vuepress-plugin-live/live-layout";
 
 // vuepress is compiled in both node and non-node models
 // it needs a "global" variable to make buble work.
