@@ -6,22 +6,23 @@ Vuepress-live allows you to make your examples more interactive automatically. F
 
 Writing this in your markdown...
 
-<pre><code>```vue live
-&lt;button&gt;example&lt;/button&gt;
+````
+```vue live
+<button>example</button>
 ```
-</code></pre>
+````
 
 ...will have this result.
 
-Go ahead! edit the part on the left. The right side has changed.
-
-```html live
+```vue live
 <button>example</button>
 ```
 
+Go ahead! edit the part on the left. The right side has changed.
+
 You can continue using non-rendered code if you don't add `live`
 
-```html
+```vue
 <button>example</button>
 ```
 
@@ -43,6 +44,7 @@ let value = 72
 ```
 
 You can even require external libraries in your examples.
+
 ```jsx live
 const _ = require("lodash")
 const anu = [2, 5, 7]
