@@ -53,5 +53,7 @@ _.each(anu, a => {
   newArray.push(`number: ${a}`)
 })
 
-<div>value: {{ newArray.join(",") }}</div>
+<div>
+  value: {{ newArray.join(", ") }}
+</div>
 ```

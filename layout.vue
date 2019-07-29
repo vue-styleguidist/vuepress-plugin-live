@@ -3,7 +3,7 @@
     <div class="preview block">
       <slot name="preview"></slot>
     </div>
-    <div class="editor block">
+    <div :class="`language-${props.language} editor block`">
       <slot name="editor"></slot>
     </div>
   </div>
@@ -11,21 +11,44 @@
 
 <style>
 .preview-code {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-flow: row-reverse wrap;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #e2e2e2;
 }
-
+.preview-code .block {
+  flex-grow: 1;
+  width: 50%;
+  border-radius: 0;
+}
+.preview-code .editor .prism-editor-wrapper {
+  height: 100%;
+}
 .preview-code .editor pre {
   margin: 0;
-  outline: none;
+  box-sizing: border-box;
+  height: 100%;
   border-radius: 0;
-  overflow-wrap: break-word;
-  overflow: auto;
-  tab-size: 2;
 }
-
 .preview-code .preview {
-  padding: 12px;
   background-color: rgb(249, 245, 245);
+  text-align: center;
+  box-sizing: border-box;
+  padding: 12px;
+}
+@media only screen and (max-width: 568px) {
+  .preview-code {
+    display: block;
+  }
+  .preview-code .block {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 419px) {
+  .preview-code {
+    margin: 0.85rem -1.5rem;
+    border-radius: 0;
+  }
 }
 </style>
