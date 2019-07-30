@@ -3,7 +3,7 @@
     <div class="preview block">
       <slot name="preview"></slot>
     </div>
-    <div :class="`language-${props.language} editor block`">
+    <div :class="`language-${props.lang} editor block`">
       <slot name="editor"></slot>
     </div>
   </div>

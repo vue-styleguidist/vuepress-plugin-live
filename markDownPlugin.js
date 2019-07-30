@@ -32,8 +32,8 @@ const addVueLive = md => {
     // add this as a prop
     const scr = getScript(code);
     const requires = getImports(scr).map(mod => `'${mod}': require('${mod}')`);
-
-    return `<vue-live :code="\`${md.utils
+    const langClean = lang.split(" ")[0];
+    return `<vue-live :layoutProps="{lang:'${langClean}'}" :code="\`${md.utils
       .escapeHtml(code)
       .replace(/\`/g, "\\`")
       .replace(/\$/g, "\\$")}\`" :requires="{${requires.join(",")}}"/>`;
