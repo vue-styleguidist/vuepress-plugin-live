@@ -1,6 +1,9 @@
 # Concept
 
-Vuepress-live allows you to make your examples more interactive automatically. For now, just add a `live` after the language in your fenced code samples like this.
+vuepress-plugin-live allows you to make your examples more interactive automatically. For now, just add a `live` after the language in your fenced code samples like this.
+
+This plugin uses [vue-live](https://github.com/vue-styleguidist/vue-live) under the hood.
+Check on [vue-live site](http://vue-live.surge.sh/) what formats examples accept.
 
 ## Make example live
 
@@ -32,7 +35,7 @@ Using the [@vuepress/register-components](https://www.npmjs.com/package/@vuepres
 
 Here you can see the [vue-slider-component](https://www.npmjs.com/package/vue-slider-component) in action.
 
-```jsx live
+```vue-hybrid live
 let value = 72
 
 <div>value: {{ value }}</div>
@@ -45,7 +48,7 @@ let value = 72
 
 You can even require external libraries in your examples.
 
-```jsx live
+```vue-hybrid live
 const _ = require("lodash")
 const anu = [2, 5, 7]
 const newArray = []
