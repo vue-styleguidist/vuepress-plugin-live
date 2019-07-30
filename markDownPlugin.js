@@ -32,8 +32,10 @@ const addVueLive = md => {
     // add this as a prop
     const scr = getScript(code);
     const requires = getImports(scr).map(mod => `'${mod}': require('${mod}')`);
-    const langClean = lang.split(" ")[0];
-    return `<vue-live :layoutProps="{lang:'${langClean}'}" :code="\`${md.utils
+    const langArray = lang.split(" ");
+    const langClean = langArray[0];
+    const jsx = langArray.length > 2 && langArray[1] === "jsx" ? "jsx " : ""; // to enable jsx, we want ```vue jsx live or ```jsx jsx live
+    return `<vue-live ${jsx}:layoutProps="{lang:'${langClean}'}" :code="\`${md.utils
       .escapeHtml(code)
       .replace(/\`/g, "\\`")
       .replace(/\$/g, "\\$")}\`" :requires="{${requires.join(",")}}"/>`;

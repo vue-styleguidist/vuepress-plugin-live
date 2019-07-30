@@ -6,7 +6,7 @@ Vuepress-live allows you to make your examples more interactive automatically. F
 
 Writing this in your markdown...
 
-````
+````md
 ```vue live
 <button>example</button>
 ```
@@ -56,4 +56,47 @@ _.each(anu, a => {
 <div>
   value: {{ newArray.join(", ") }}
 </div>
+```
+
+## Enable jsx with the jsx flag
+
+If your examples are jsx vue components, use an extra jsx flag
+
+````md
+```jsx jsx live
+export default {
+  render(){
+    return <vue-slider
+      value={37}
+    />
+  }
+}
+```
+````
+
+> **NOTE**: The jsx flag should always be second after the language. If you use just `jsx live` as a flag it will use the standard vue parser.
+> JSX syntax highlighting in markdown is better than vue. You can still use jsx with your normal examples.
+
+Without the second jsx flag, vue-live would pick up on the beginnig of the jsx expression and stop parsing there.
+The script would be incomplete.
+
+```jsx jsx live
+export default {
+  data(){
+    return {
+      value: 37
+    }
+  },
+  render(){
+    return (
+      <div>
+        <vue-slider
+          style={{margin: "20px 0"}}
+          value={this.value}
+          order={false}
+        />
+      </div>
+    )
+  }
+}
 ```
