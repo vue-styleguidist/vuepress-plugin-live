@@ -46,7 +46,8 @@ module.exports = {
 #### `layout` (optional)
 
 Absolute path to the layout vue-live is going to use.
-NOTA: the layout should have 2 slots named `preview` and `editor`.
+
+> NOTA: the layout should have 2 slots named `preview` and `editor`.
 
 Example layout (simplest):
 
