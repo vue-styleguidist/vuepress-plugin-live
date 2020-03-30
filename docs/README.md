@@ -48,7 +48,7 @@ let value = 72
 
 You can even require external libraries in your examples.
 
-```vue-hybrid live
+```vue-hybrid live {lineNumbers:true}
 const _ = require("lodash")
 const anu = [2, 5, 7]
 const newArray = []

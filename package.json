@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "acorn": "^6.1.1",
-    "vue-live": "^1.4.3",
+    "vue-live": "^1.6.0",
     "walkes": "^0.2.1"
   }
 }

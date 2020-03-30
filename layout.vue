@@ -25,6 +25,11 @@
 .preview-code .editor .prism-editor-wrapper {
   height: 100%;
 }
+
+.preview-code .editor .prism-editor-wrapper > .prism-editor__line-numbers {
+  position: absolute;
+}
+
 .preview-code .editor pre {
   margin: 0;
   box-sizing: border-box;

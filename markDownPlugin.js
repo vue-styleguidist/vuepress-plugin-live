@@ -10,7 +10,7 @@ const addVueLive = md => {
     const lang = token.info.trim();
 
     // if it does not ends with live just use default fence
-    if (!/ live$/.test(lang)) {
+    if (!/ live$/.test(lang) && !/ live /.test(lang)) {
       return fence(...args);
     }
 
@@ -34,11 +34,15 @@ const addVueLive = md => {
     const requires = getImports(scr).map(mod => `'${mod}': require('${mod}')`);
     const langArray = lang.split(" ");
     const langClean = langArray[0];
-    const jsx = langArray.length > 2 && langArray[1] === "jsx" ? "jsx " : ""; // to enable jsx, we want ```vue jsx live or ```jsx jsx live
-    return `<vue-live ${jsx}:layoutProps="{lang:'${langClean}'}" :code="\`${md.utils
+    const codeClean = md.utils
       .escapeHtml(code)
       .replace(/\`/g, "\\`")
-      .replace(/\$/g, "\\$")}\`" :requires="{${requires.join(",")}}"/>`;
+      .replace(/\$/g, "\\$");
+    const editorProps = langArray.find(l => /^\{.+\}$/.test(l));
+    const jsx = langArray.length > 2 && langArray[1] === "jsx" ? "jsx " : ""; // to enable jsx, we want ```vue jsx live or ```jsx jsx live
+    return `<vue-live ${jsx}:layoutProps="{lang:'${langClean}'}" :code="\`${codeClean}\`" :requires="{${requires.join(
+      ","
+    )}}"${editorProps ? ` :editorProps="${editorProps}"` : ""} />`;
   };
 };
 
