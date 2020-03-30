@@ -40,9 +40,9 @@ const addVueLive = md => {
       .replace(/\$/g, "\\$");
     const editorProps = langArray.find(l => /^\{.+\}$/.test(l));
     const jsx = langArray.length > 2 && langArray[1] === "jsx" ? "jsx " : ""; // to enable jsx, we want ```vue jsx live or ```jsx jsx live
-    return `<vue-live ${jsx}:layoutProps="{lang:'${langClean}'}" :code="\`${codeClean}\`" :requires="{${requires.join(
+    return `<no-ssr><vue-live ${jsx}:layoutProps="{lang:'${langClean}'}" :code="\`${codeClean}\`" :requires="{${requires.join(
       ","
-    )}}"${editorProps ? ` :editorProps="${editorProps}"` : ""} />`;
+    )}}"${editorProps ? ` :editorProps="${editorProps}"` : ""} /></no-ssr>`;
   };
 };
 

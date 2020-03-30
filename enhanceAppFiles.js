@@ -14,7 +14,9 @@ module.exports = function enhanceAppFiles() {
     "}",
     // and in order for the loading to happen after we assign the variable,
     // we load vue-live as a require instead of an import
-    `Vue.component("VueLive", () => import(${JSON.stringify(vueLivePath)}))`
+    `Vue.component("VueLive", () => import(${JSON.stringify(
+      vueLivePath
+    )}));Vue.component("NoSsr", () => import('vue-no-ssr')) `
   ].join("\n");
   return { name: "vue-live-enhancer", content };
 };
