@@ -1,6 +1,6 @@
 # vuepress-plugin-live
 
-Make your markdown code examples come alive using [vue-live](vue-styleguidist/vue-live)
+Make your markdown code examples come alive using [vue-live](https://github.com/vue-styleguidist/vue-live)
 
 [![Build Status](https://travis-ci.com/vue-styleguidist/vuepress-plugin-live.svg?branch=master)](https://travis-ci.com/vue-styleguidist/vuepress-plugin-live)
 [![NPM Version](https://img.shields.io/npm/v/vuepress-plugin-live.svg)](https://www.npmjs.com/package/vuepress-plugin-live) [![NPM Downloads](https://img.shields.io/npm/dm/vuepress-plugin-live.svg)](https://www.npmjs.com/package/vuepress-plugin-live)
