@@ -8,16 +8,17 @@ module.exports = {
     editLinks: true,
     docsDir: "docs",
     search: false,
-    sidebar: ["/", "/Install.md"]
+    sidebar: ["/", "/Install.md"],
   },
   plugins: [
+    ["code-copy", { selector: `div:not(.editor)[class*="language-"] pre` }],
     [
       require("../../index"),
       {
         // uncomment next line to use a custom layout
         // layout: path.resolve(__dirname, "./components/custom-layout.vue"),
-        noSsr: true
-      }
+        noSsr: true,
+      },
     ],
     [
       "@vuepress/register-components",
@@ -25,10 +26,10 @@ module.exports = {
         components: [
           {
             name: "vue-slider",
-            path: path.resolve(__dirname, "../vue-slider")
-          }
-        ]
-      }
-    ]
-  ]
+            path: path.resolve(__dirname, "../vue-slider"),
+          },
+        ],
+      },
+    ],
+  ],
 };
