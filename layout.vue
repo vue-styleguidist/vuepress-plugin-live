@@ -39,6 +39,25 @@
   box-sizing: border-box;
   padding: 12px;
 }
+
+/* adjust editor */
+.prism-editor__line-numbers {
+  text-align: right;
+}
+
+/* when line numbers are on, reduce left padding */
+.prism-editor-wrapper .prism-editor__line-numbers ~ .prism-editor__code {
+  padding-left: 0.5rem;
+}
+
+.prism-editor__code {
+  flex: 2;
+}
+
+.prism-editor__code:focus {
+  outline: none;
+}
+
 @media only screen and (max-width: 568px) {
   .preview-code {
     display: block;
