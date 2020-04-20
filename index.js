@@ -7,6 +7,6 @@ module.exports = (options, app, plugin) => {
     name: "vuepress-plugin-live",
     chainWebpack: chainWebpack(options),
     enhanceAppFiles,
-    chainMarkdown
+    chainMarkdown: chainMarkdown(options),
   };
 };

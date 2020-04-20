@@ -2,7 +2,7 @@ const { parseComponent } = require("vue-template-compiler");
 const { isCodeVueSfc } = require("vue-inbrowser-compiler");
 const getImports = require("./getImports");
 
-const addVueLive = md => {
+const addVueLive = ({ noSsr }) => md => {
   const fence = md.renderer.rules.fence;
   md.renderer.rules.fence = (...args) => {
     const [tokens, idx] = args;
@@ -21,6 +21,7 @@ const addVueLive = md => {
         const parts = parseComponent(code);
         return parts && parts.script ? parts.script.content : "";
       }
+
       //else it could be the weird almost jsx of vue-styleguidist
       return code.split(/\n[\t ]*</)[0];
     };
@@ -40,16 +41,22 @@ const addVueLive = md => {
       .replace(/\$/g, "\\$");
     const editorProps = langArray.find(l => /^\{.+\}$/.test(l));
     const jsx = langArray.length > 2 && langArray[1] === "jsx" ? "jsx " : ""; // to enable jsx, we want ```vue jsx live or ```jsx jsx live
-    return `<no-ssr><vue-live ${jsx}:layoutProps="{lang:'${langClean}'}" :code="\`${codeClean}\`" :requires="{${requires.join(
-      ","
-    )}}"${editorProps ? ` :editorProps="${editorProps}"` : ""} /></no-ssr>`;
+    const markdownGenerated = `<vue-live ${jsx}
+      :layoutProps="{lang:'${langClean}'}" 
+      :code="\`${codeClean}\`" 
+      :requires="{${requires.join(",")}}"
+      ${editorProps ? ` :editorProps="${editorProps}"` : ""}
+       />`;
+    return noSsr ? `<no-ssr>${markdownGenerated}</no-ssr>` : markdownGenerated;
   };
 };
 
-module.exports = function markDownPlugin(config) {
-  config.plugins.delete("snippet");
-  config
-    .plugin("vue-live")
-    .use(addVueLive)
-    .end();
+module.exports = function(options) {
+  return function markDownPlugin(config) {
+    config.plugins.delete("snippet");
+    config
+      .plugin("vue-live")
+      .use(addVueLive(options))
+      .end();
+  };
 };
