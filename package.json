@@ -28,11 +28,13 @@
   "devDependencies": {
     "@vuepress/plugin-register-components": "^1.0.3",
     "lodash": "^4.17.11",
+    "lodash.throttle": "^4.1.1",
     "remark": "^10.0.1",
     "unist-util-visit": "^1.4.0",
     "validate-commit-msg": "^2.14.0",
     "vue-slider-component": "^3.0.31",
-    "vuepress": "^1.0.3"
+    "vuepress": "^1.0.3",
+    "vuepress-plugin-code-copy": "^1.0.6"
   },
   "dependencies": {
     "acorn": "^6.1.1",
