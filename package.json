@@ -32,7 +32,8 @@
     "unist-util-visit": "^1.4.0",
     "validate-commit-msg": "^2.14.0",
     "vue-slider-component": "^3.0.31",
-    "vuepress": "^1.0.3"
+    "vuepress": "^1.5.2",
+    "vuepress-plugin-container": "^2.1.4"
   },
   "dependencies": {
     "acorn": "^6.1.1",
