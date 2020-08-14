@@ -2,7 +2,7 @@ const { parseComponent } = require("vue-template-compiler");
 const { isCodeVueSfc } = require("vue-inbrowser-compiler");
 const getImports = require("./getImports");
 
-const addVueLive = ({ noSsr }) => md => {
+const addVueLive = ({ noSsr, liveFilter }) => (md) => {
   const fence = md.renderer.rules.fence;
   md.renderer.rules.fence = (...args) => {
     const [tokens, idx] = args;
@@ -10,11 +10,15 @@ const addVueLive = ({ noSsr }) => md => {
     const lang = token.info.trim();
 
     // if it does not ends with live just use default fence
-    if (!/ live$/.test(lang) && !/ live /.test(lang)) {
+    if (
+      liveFilter
+        ? !liveFilter(lang)
+        : !/ live$/.test(lang) && !/ live /.test(lang)
+    ) {
       return fence(...args);
     }
 
-    const getScript = code => {
+    const getScript = (code) => {
       // script is at the beginning of a line after a return
       // In case we are loading a vue component as an example, extract script tag
       if (isCodeVueSfc(code)) {
@@ -32,14 +36,16 @@ const addVueLive = ({ noSsr }) => md => {
     // put all requires into a "requires" object
     // add this as a prop
     const scr = getScript(code);
-    const requires = getImports(scr).map(mod => `'${mod}': require('${mod}')`);
+    const requires = getImports(scr).map(
+      (mod) => `'${mod}': require('${mod}')`
+    );
     const langArray = lang.split(" ");
     const langClean = langArray[0];
     const codeClean = md.utils
       .escapeHtml(code)
       .replace(/\`/g, "\\`")
       .replace(/\$/g, "\\$");
-    const editorProps = langArray.find(l => /^\{.+\}$/.test(l));
+    const editorProps = langArray.find((l) => /^\{.+\}$/.test(l));
     const jsx = langArray.length > 2 && langArray[1] === "jsx" ? "jsx " : ""; // to enable jsx, we want ```vue jsx live or ```jsx jsx live
     const markdownGenerated = `<vue-live ${jsx}
       :layoutProps="{lang:'${langClean}'}" 
