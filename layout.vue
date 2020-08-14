@@ -9,6 +9,13 @@
   </div>
 </template>
 
+<script>
+import "prismjs/themes/prism-tomorrow.css";
+import "vue-prism-editor/dist/prismeditor.min.css";
+
+export default {};
+</script>
+
 <style>
 .preview-code {
   display: flex;
@@ -21,10 +28,6 @@
   flex-grow: 1;
   width: 50%;
   border-radius: 0;
-}
-.preview-code .editor .prism-editor-wrapper {
-  height: 100%;
-  display: flex;
 }
 
 .preview-code .editor pre {
@@ -40,22 +43,14 @@
   padding: 12px;
 }
 
-/* adjust editor */
-.prism-editor__line-numbers {
-  text-align: right;
+.preview-code .prism-editor-wrapper {
+  color: white;
+  padding: 0;
 }
 
-/* when line numbers are on, reduce left padding */
-.prism-editor-wrapper .prism-editor__line-numbers ~ .prism-editor__code {
-  padding-left: 0.5rem;
-}
-
-.prism-editor__code {
-  flex: 2;
-}
-
-.prism-editor__code:focus {
-  outline: none;
+.preview-code .prism-editor-wrapper .prism-editor__textarea,
+.preview-code .prism-editor-wrapper .prism-editor__editor {
+  padding: 20px;
 }
 
 @media only screen and (max-width: 568px) {
