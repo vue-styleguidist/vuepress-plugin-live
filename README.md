@@ -19,10 +19,8 @@ yarn add -D vuepress-plugin-live
 //.vuepress/config.js
 module.exports = {
   //...
-  plugins: [
-    ["live"],
-  ]
-}
+  plugins: [["live"]],
+};
 ```
 
 ## Usage
@@ -33,3 +31,52 @@ In your markdown file just add a `live` flag to your fenced code blocks.
 &lt;button&gt;example&lt;/button&gt;
 ```
 </code></pre>
+
+## Options
+
+### noSsr
+
+Avoid server side rendering the components in components if they are not ssr ready. Remember that vuepress build pre-compiles the html pages you need.
+
+#### default
+
+`false`
+
+#### example
+
+```js
+//.vuepress/config.js
+module.exports = {
+  //...
+  plugins: [["live", { noSsr: true }]],
+};
+```
+
+### liveFilter
+
+Allows users of theis plugin to say what fenced blocks will be rendered with vue-live.
+
+#### default
+
+```js
+(lang) => / live$/.test(lang) && / live /.test(lang);
+```
+
+#### example
+
+```js
+//.vuepress/config.js
+module.exports = {
+  //...
+  plugins: [
+    [
+      "live",
+      {
+        liveFilter(lang) {
+          return ["vue", "js", "jsx"].includes(lang);
+        },
+      },
+    ],
+  ],
+};
+```
