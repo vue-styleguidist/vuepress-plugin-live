@@ -27,6 +27,7 @@
   "homepage": "http://vuepress-live.surge.sh/",
   "devDependencies": {
     "@vuepress/plugin-register-components": "^1.0.3",
+    "@vuepress/theme-default": "^1.5.3",
     "lodash": "^4.17.11",
     "lodash.throttle": "^4.1.1",
     "remark": "^10.0.1",
