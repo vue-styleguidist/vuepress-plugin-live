@@ -34,6 +34,26 @@ In your markdown file just add a `live` flag to your fenced code blocks.
 
 ## Options
 
+### layout
+
+Path to a custom layout for the vue-live instances
+
+#### default
+
+`vuepress-plugin-live/layout.vue`
+
+#### example
+
+```js
+//.vuepress/config.js
+module.exports = {
+  //...
+  plugins: [
+    ["live", { layout: path.resolve(__dirname, "../VueLiveLayout.vue") }],
+  ],
+};
+```
+
 ### noSsr
 
 Avoid server side rendering the components in components if they are not ssr ready. Remember that vuepress build pre-compiles the html pages you need.
