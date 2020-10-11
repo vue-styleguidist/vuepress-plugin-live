@@ -26,15 +26,15 @@
   },
   "homepage": "http://vuepress-live.surge.sh/",
   "devDependencies": {
-    "@vuepress/plugin-register-components": "^1.0.3",
-    "@vuepress/theme-default": "^1.5.3",
+    "@vuepress/plugin-register-components": "^1.6.0",
+    "@vuepress/theme-default": "^1.6.0",
     "lodash": "^4.17.11",
     "lodash.throttle": "^4.1.1",
     "validate-commit-msg": "^2.14.0",
     "vue-slider-component": "^3.0.31",
-    "vuepress": "^1.5.2",
+    "vuepress": "^1.6.0",
     "vuepress-plugin-code-copy": "^1.0.6",
-    "vuepress-plugin-container": "^2.1.4"
+    "vuepress-plugin-container": "^2.1.5"
   },
   "dependencies": {
     "acorn": "^6.1.1",
