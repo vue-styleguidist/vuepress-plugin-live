@@ -18,7 +18,8 @@ module.exports = {
         // uncomment next line to use a custom layout
         // layout: path.resolve(__dirname, "./components/custom-layout.vue"),
 
-        // I chose to show a component that can't be server side rendered
+        // I chose to show a component, vue-slider,
+        // that can't be server side rendered
         // so I use the noSsr flag to avoid the "document is not defined" error
         noSsr: true,
       },
