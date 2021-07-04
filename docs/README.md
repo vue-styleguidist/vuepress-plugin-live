@@ -102,4 +102,19 @@ export default {
     )
   }
 }
+
+## Customize editor props
+
+If you want to change the [editor props](https://github.com/koca/vue-prism-editor#props), you can add the props after the langArray
+
+````md
+```vue live {lineNumbers:true,readonly:true}
+<button>example</button>
+```
+````
+
+...will have this result.
+
+```vue live {lineNumbers:true,readonly:true}
+<button>example</button>
 ```
